@@ -1,0 +1,7 @@
+Reply from 206.190.36.45: bytes=32 time=24ms TTL=51
+Reply from 206.190.36.45: bytes=32 time=24ms TTL=51
+Reply from 206.190.36.45: bytes=32 time=24ms TTL=51
+Reply from 206.190.36.45: bytes=32 time=25ms TTL=51
+Reply from 10.16.205.101: bytes=32 time=2ms TTL=124
+Reply from 10.16.205.101: bytes=32 time=2ms TTL=124
+Reply from 10.16.205.101: bytes=32 time=2ms TTL=124
