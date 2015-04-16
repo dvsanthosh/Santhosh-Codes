@@ -174,7 +174,6 @@ public class LatLang2AddressConvert {
 						btnOpenResult.setEnabled(true);
 					}
 				} catch (IOException | JSONException | InterruptedException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}

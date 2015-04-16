@@ -15,12 +15,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 	/**
+	 * Contains classes to convert lat lang to address using Google Geo Api webService.
 	 * @author D.V.Santhosh
 	 *
 	 */
 	public class Convert {
 
 		/**
+		 * 
+		 * Directly writes converted addresses of lat lang read from input file to the output file.
+		 * progress 
 		 * @param args
 		 * @throws IOException 
 		 * @throws JSONException 
@@ -51,9 +55,10 @@ import org.json.JSONObject;
 			consoleOutput.append(" In Convert Reading from: "+ inFile+"\n");
 			BufferedReader bufReader = new BufferedReader(new FileReader(inputFile));
 			String line= bufReader.readLine();				// first line has got column header
+			int progress=1;
 			while((line = bufReader.readLine()) != null)
 			{
-				int progress=1;
+				
 				String [] lnglat = line.split(",");
 				String latlng = "latlng="+lnglat[1]+","+lnglat[0]; 				//"+"&result_type=street_address&key=API_KEY" can be used for restricted result but needs https with API_KEY;
 				Thread.sleep(200);
@@ -65,7 +70,7 @@ import org.json.JSONObject;
 				String address = null;
 				try{address = (String) ((JSONObject) ((JSONArray) myJSONResult.get("results")).get(0)).get("formatted_address");
 				}catch(Exception e){
-					e.printStackTrace();
+					//e.printStackTrace();
 					continue;
 					}
 
@@ -74,6 +79,7 @@ import org.json.JSONObject;
 				    writer.write(line+","+address+"\n");
 					consoleOutput.append(progress+". "+line +"," + address+"\n");
 					progressBar.setSelection(progress*progressBar.getMaximum()/2500);
+					progress++;
 				} catch (IOException ex) {}
 			}
 			bufReader.close();
@@ -101,8 +107,8 @@ import org.json.JSONObject;
 			    
 				while ((line = replyBuffReader.readLine()) != null) {
 					replyString = replyString.concat(line);
-					}
-			        
+				}
+				
 				replyBuffReader.close();
 			    httpUrlConn.disconnect();   
 		
