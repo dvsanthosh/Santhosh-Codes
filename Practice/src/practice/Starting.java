@@ -3,6 +3,7 @@
  */
 package practice;
 import practice.strings.IsPermutation;
+import practice.strings.SentenceReverse;
 import practice.strings.StringReverse;
 
 /**
@@ -15,9 +16,10 @@ public class Starting{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new StringReverse("MadaM");
-		new IsPermutation("god","god");
+		// Comment Which ever you dont want
+		new StringReverse("Hello World!");
+		new IsPermutation("god","doG");
+		new SentenceReverse(" This is the string to be reversed");
 
 	}
 

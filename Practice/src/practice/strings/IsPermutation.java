@@ -10,12 +10,12 @@ package practice.strings;
 public class IsPermutation {
 
 	public IsPermutation(String string, String string2) {
-		// TODO Auto-generated constructor stub
 		boolean result;
+		
 		result = string.length()==string2.length() ? true : false;
 	
-		result = sort(string).equals(sort(string2));
-		
+		//result = sort(string).equals(sort(string2));								// for case sensitive
+		result = sort(string.toUpperCase()).equals(sort(string2.toUpperCase()));	// for case insensitive
 		System.out.println(string + " is permutation of " + string2 + ": " + result);
 	}
 	

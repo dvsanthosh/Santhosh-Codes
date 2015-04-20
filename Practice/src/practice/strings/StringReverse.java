@@ -19,6 +19,10 @@ public class StringReverse {
 		while(strlen>0)
 			strRes.append(str.charAt(--strlen));
 		System.out.println(strRes);
+		
+		
+		String result = new StringBuffer(str).reverse().toString();
+		System.out.println(result);
 	}
 }
 
