@@ -1,0 +1,11 @@
+<!ELEMENT countries (country*)>
+<!ELEMENT country (city*,language*)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT city (name*,population*)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT population (#PCDATA)>
+
+<!ATTLIST country name CDATA #IMPLIED>
+<!ATTLIST country population CDATA #IMPLIED>
+<!ATTLIST country area CDATA #IMPLIED>
+<!ATTLIST language percentage CDATA #IMPLIED>
